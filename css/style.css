@@ -30,22 +30,113 @@
     font-style: normal;
 }
 
-body {
-    background-color: grey;
-}
-
 /*Стилизация header*/
 .header {
     background-color: #F1F5F7;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 320px;
+    margin-bottom: 17px;
+}
+
+.navbar {
+    background-color: #293449;
+    max-height: 42px;
+}
+
+.navbar-container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo_head {
+    width: 220px;
+    height: 47px;
+    float: left;
+    clear: both;
+    background: url(../img/head_logo.jpeg) no-repeat 0 0;
 }
 
 .site-name {
     display: none;
 }
 
-.navbar {
+.navbar-form__input {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
     background-color: #293449;
+    outline: none;
+    border: none;
 }
+
+.navbar-form {
+    padding-top: 9px;
+    padding-left: 17px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+
+.navbar-form::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/icon-search.png);
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+    margin-bottom: 6px;
+}
+
+.nav-bar__panel {
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    padding-left: 112px;
+}
+
+.nav-bar__elem--cart::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/icon-cart.png);
+    width: 15px;
+    height: 15px;
+    margin-left: 50px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
+.nav-bar__elem--bookmark::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/icon-bookmark.svg);
+    width: 14px;
+    height: 16px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+}
+
+.nav-bar__elem--order {
+    margin-left: 26px;
+}
+
+.nav-bar__elem-link--order {
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 19px;
+    padding-right: 16px;
+    background-color: #63A63E;
+}
+
 
 .nav-bar__elem-link,
 .nav-bar__elem,
@@ -58,7 +149,17 @@ body {
     color: #ffffff;
     text-decoration: none;
     list-style-type: none;
-    padding-left: 0;
+
+}
+
+.header-info {
+    width: 940px;
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin: 0 auto;
+    margin-top: 41px;
+    margin-bottom: 40px;
 }
 
 .header-info__text {
@@ -68,6 +169,16 @@ body {
     font-size: 16px;
     line-height: 23px;
     color: #EE3643;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 33px;
+}
+
+.header-info__text-adress-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 93px;
+    padding-right: 69px;
 }
 
 .header-info__text-number {
@@ -77,6 +188,28 @@ body {
     font-size: 21px;
     line-height: 30px;
     color: #EE3643;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    background: #F3F7F9;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-right: 45px;
+    padding-left: 39px;
+}
+
+.header-info__text-number::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/Shape.png);
+    width: 17.51px;
+    height: 18.97px;
+    margin-right: 16.51px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+
 }
 
 .header-info__text-adress {
@@ -86,6 +219,9 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #32425C;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
 .header-info__link-btn,
@@ -97,12 +233,43 @@ body {
     line-height: 21px;
     color: #000000;
     text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header-info__link-btn {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.header-info__link-btn--login {
+    background-color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 27px;
+    margin-left: 0;
+}
+
+.header-info__link-btn--login::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/icon-login.png);
+    width: 20px;
+    height: 17px;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-bottom: 3px;
 }
 
 .navigation__main-elem,
 .navigation__main-link,
 .navigation__panel {
-    font-family: Cuprum;
+    font-family: "Cuprum";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -115,4 +282,882 @@ body {
 
 .navigation {
     background-color: #32425C;
+    width: 940px;
+    margin: 0 auto;
+    background: #32425C;
+    box-shadow: inset 0px -5px 0px #293449;
+}
+
+.navigation__panel {
+    display: flex;
+
+}
+
+.header-info__user-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation__panel {
+    padding-left: 13px;
+}
+
+.navigation__main-link {
+    padding-left: 28px;
+    padding-right: 32px;
+    padding-top: 19px;
+    padding-bottom: 14px;
+}
+
+/*block presentation*/
+
+.presentation {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.presentation__main-text,
+.presentation__text {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.presentation__info {
+    width: 300px;
+    max-height: 123px;
+}
+
+.presentation__main-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-left: 23px;
+}
+
+.presentation__main-text--uppercase {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 19px;
+}
+
+.presentation__link {
+    display: block;
+    width: 135px;
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 0;
+    margin-top: 14px;
+    margin-bottom: 21px;
+    margin-left: 23px;
+}
+
+
+.presentation__info--yellow {
+    display: flex;
+    background-color: #FFBF47;
+}
+
+.presentation__bucket-svg {
+    margin-left: 50px;
+    margin-top: 31px;
+}
+
+.presentation__info--blue {
+    display: flex;
+    background-color: #3BBCE3;
+    margin-left: 20px;
+}
+
+.presentation__drill-svg {
+    margin-top: 34px;
+    margin-left: 37px;
+}
+
+.presentation-info--purple {
+    display: flex;
+    background-color: #DC91D8
+}
+
+.presentation__truck-svg {
+    margin-top: 31px;
+    margin-left: 37px;
+}
+
+.presentation-info--green {
+    display: flex;
+    background-color: #8ED78F;
+    margin-top: 20px;
+}
+
+.presentation__cart-svg {
+    margin-top: 26px;
+    margin-left: 38px;
+}
+
+.presentation__car-svg {
+    margin-top: 32px;
+    margin-left: 34px;
+}
+
+.presentation-info--img {
+    width: 640px;
+    height: 266px;
+    background-image: url(/img/Layer.jpg);
+    background-repeat: no-repeat;
+    margin-top: 20px;
+}
+
+.presentation__link--red {
+    display: block;
+    width: 192px;
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    color: #fff;
+    margin-left: 24px;
+    margin-top: 113px;
+    margin-bottom: 27px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    background-color: #EE3643;
+}
+
+.small-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-left: 0;
+}
+
+.presentation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bound {
+    margin-top: 20px;
+}
+
+/*Блок популярные продукты popular-product*/
+
+.popular-product__header {
+    width: 940px;
+    background-color: #F9F5F0;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 59px;
+}
+
+.popular-product__wrapper {
+    width: 940px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.popular-product__card:nth-child(1) {
+    margin-left: 0;
+}
+
+.popular-product__card {
+    margin-left: 20px;
+    width: 220px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+}
+
+.bfg-9000__img {
+    padding-top: 6px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bfg-3000__img {
+    padding-top: 29px;
+    padding-bottom: 38px;
+    padding-left: 40px;
+    padding-right: 53px;
+}
+
+.bfg-6000__img {
+    padding-top: 22px;
+    padding-bottom: 28px;
+    padding-left: 33px;
+    padding-right: 43px;
+}
+
+.bfg-2000__img {
+    padding-top: 29px;
+    padding-bottom: 38px;
+    padding-left: 40px;
+    padding-right: 53px;
+}
+
+.popular-product__main-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425C;
+    margin-top: 29px;
+    margin-bottom: 29px;
+    margin-left: 28px;
+}
+
+
+.popular-product__main-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #EE3643;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 442px;
+    margin-right: 14px;
+}
+
+.popular-product__card-text {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.popular-product__card-old-price {
+    Font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: #A9A9A9;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.popular-product__card-actual-price {
+    position: relative;
+    width: 80px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background-color: #EE3643;
+    padding: 10px 30px;
+    margin-top: 13px;
+    margin-left: 45px;
+    border-radius: 3px;
+}
+
+.popular-product__card-actual-price:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -19px;
+    width: 0;
+    height: 0;
+    border: 19px solid #fff;
+    border-left-color: #ee3643;
+}
+
+/*блок популярные производители popular-manufacturer*/
+
+
+.popular-manufacturer__header {
+    width: 940px;
+    background-color: #F9F5F0;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 61px;
+}
+
+.popular-manufacturer__main-text {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425C;
+    margin-top: 29px;
+    margin-bottom: 30px;
+    margin-left: 28px;
+
+}
+
+
+.popular-manufacturer__main-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-right: 38px;
+    padding-left: 38px;
+    margin-top: 25px;
+    margin-bottom: 26px;
+    background-color: #EE3643;
+    text-decoration: none;
+    margin-left: 334px;
+}
+
+.popular-manufacturer__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+}
+
+.brand-logo__link {
+    vertical-align: top;
+    width: 217.5px;
+    margin-right: 20px;
+    line-height: 145px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brand-logo__link:nth-child(4) {
+    margin-right: 0;
+}
+
+.brand-logo__link:nth-child(8) {
+    margin-right: 0;
+}
+
+.barand-logo__img {
+    vertical-align: middle;
+}
+
+/*блок сервисы services*/
+.services {
+    background-color: #F1F5F7;
+    max-width: 100%;
+}
+
+.services__wrapper {
+    width: 940px;
+    margin: 0 auto; 
+}
+
+.services__main-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-top: 64px;
+    margin-bottom: 0px;
+}
+
+.services__text {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 25px;
+}
+
+.services__main-text-delivery {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.services__text-delivery {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+}
+
+.services__wrapper-list {
+    display: flex; 
+}
+
+.services__list-elem {
+    width: 240px;
+}
+
+.services__list-link {
+    padding-left: 22px;
+    padding-top: 13.5px;
+    padding-bottom: 17.5px;
+    background-color: #32425C; 
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    color: #FFFFFF; 
+    text-decoration: none;
+
+}
+
+.services__list-elem {
+    list-style-type: none;
+}
+
+
+
+/*блок о компании тезномарт about-technomart*/
+
+.about-technomart__main-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-technomart__text {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.about-technomart__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-technomart__list-elem {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.about-technomart__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #EE3643;
+}
+
+/*Footer*/
+
+.footer {
+    background-color: #32425C;
+}
+
+.footer__list-one,
+.footer__list-two {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer__link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F1F5F7;
+    text-decoration: none;
+}
+
+.footer__link-gold {
+    color: #FFD180;
+}
+
+.footer__text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F3F7F9;
+}
+
+.footer-wrapper--social {
+    background-color: #293449;
+}
+
+.footer__list-social {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer__text-social {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.footer__text-social-color {
+    color: #FFD180;
+}
+
+/*Хлебные крошки каталога*/
+
+.breadcrumb__elem-link {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.main-catalog-name {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425C;
+    background-color: #F1F5F7;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 29px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*Сортировка каталога*/
+
+.filter-contents {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    background: #F7F3EC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.production-legend {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.filter__name-brand {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.supply-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.supply-listt__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter-show-btn {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding-left: 79px;
+    padding-right: 79px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sort {
+    background: #F7F3EC;
+}
+
+.sort__text {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.sort__link {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400l;
+    font-size: 13px;
+    line-height: 18px;
+    color: #EE3643;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sort__link--nonaction {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+}
+
+.ubderline-dotted {
+    border-bottom: #EE3643 1px solid;
+    border-bottom-style: dotted;
+}
+
+.product__navigation-link {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.product__navigation {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+}
+
+/*блок о перфораторах about-perforators*/
+
+.about-perforators {
+    background-color: #F1F5F7;
+}
+
+.about-perforators__main-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-perforators__text {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+}
+
+/*блок товар добавлен add-order*/
+
+.add-order__text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.add-order__btn-wrapper {
+    background: #F1F1F1;
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+.add-order__btn-arrange {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #EE3643;
+    border: none;
+    outline: none;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-left: 47px;
+    padding-right: 47px;
+}
+
+.add-order__btn-proceed {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+}
+
+/*блок формы обратгой связи feedback*/
+
+.form__feedback-name,
+.form__feedback-email,
+.form__feedback-text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.form__feedback-input {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #A9A9A9;
+}
+
+.form__feedback-btn-send {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #EE3643;
+    border: none;
+    outline: none;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
