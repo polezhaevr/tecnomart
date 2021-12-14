@@ -126,7 +126,7 @@
 }
 
 .nav-bar__elem--order {
-    margin-left: 26px;
+    margin-left: 22px;
 }
 
 .nav-bar__elem-link--order {
@@ -664,7 +664,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
-    
+
 }
 
 .brand-logo__link {
@@ -695,10 +695,24 @@
     max-width: 100%;
 }
 
+.services__wrapper-block {
+    display: flex;
+    padding-bottom: 50px;
+}
+
 .services__wrapper {
     width: 940px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    background-image: url(/img/services-car.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
+
+.services__wrapper-text {
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
 
 .services__main-text {
     font-family: "Cuprum";
@@ -747,35 +761,68 @@
 }
 
 .services__wrapper-list {
-    display: flex; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
 }
 
-.services__list-elem {
-    width: 240px;
+.block-line {
+    background-image: url(/img/vertical_line.png);
+    position: relative;
+    width: 10px;
+    height: 279px;
+    margin-top: 25px;
+    right: 10px;
+
 }
 
 .services__list-link {
-    padding-left: 22px;
-    padding-top: 13.5px;
-    padding-bottom: 17.5px;
-    background-color: #32425C; 
+    width: 218px;
+    background-color: #32425C;
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 700;
     font-size: 21px;
     line-height: 30px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     text-decoration: none;
+    text-align: left;
+    padding-left: 22px;
+    padding-top: 13.5px;
+    padding-bottom: 17.5px;
+    background: #32425C;
+    box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+}
 
+.services__list-link--white {
+    background: #FFFFFF;
+    color: #32425C;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px #FFFFFF;
 }
 
 .services__list-elem {
     list-style-type: none;
 }
 
-
-
 /*блок о компании тезномарт about-technomart*/
+
+.about-technomart {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.about-technomart__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-technomart__wrapper:nth-child(2) {
+    margin-left: 180px;
+}
 
 .about-technomart__main-text {
     font-family: "Cuprum";
@@ -785,6 +832,7 @@
     line-height: 30px;
     text-transform: uppercase;
     color: #000000;
+    margin: 0;
 }
 
 .about-technomart__text {
@@ -794,11 +842,14 @@
     font-size: 13px;
     line-height: 24px;
     color: #000000;
+    margin: 0;
+    margin-top: 24px;
 }
 
 .about-technomart__list {
     list-style-type: none;
     padding-left: 0;
+    margin: 0px;
 }
 
 .about-technomart__list-elem {
@@ -810,7 +861,30 @@
     color: #000000;
 }
 
+.about-technomart__list-elem:before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/Object-line.png);
+    width: 25px;
+    height: 2px;
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-bottom: 2px;
+
+}
+
+.about-technomart__list-elem:nth-child(2) {
+    margin-top: 12px;
+}
+
+.about-technomart__list-elem:nth-child(3) {
+    margin-top: 12px;
+    padding-bottom: 23px;
+}
+
 .about-technomart__link {
+    width: 220px;
+    font-family: "Cuprum";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -818,10 +892,32 @@
     color: #FFFFFF;
     text-decoration: none;
     padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-bottom: 9px;
     background-color: #EE3643;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.about-technomart__map-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 11px;
+    padding-bottom: 9px;
+
+    background-color: #EE3643;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.about-technomart__map-img {
+    margin-top: 32px;
 }
 
 /*Footer*/
@@ -830,10 +926,22 @@
     background-color: #32425C;
 }
 
+
+.footer-wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+.footer-wrapper__list:nth-child(2) {
+    margin-top: 22px;
+    padding-bottom: 55px;
+}
+
+
 .footer__list-one,
 .footer__list-two {
     list-style-type: none;
-    padding-left: 0;
 }
 
 .footer__link {
@@ -846,21 +954,75 @@
     text-decoration: none;
 }
 
+.footer-main__logo {
+    width: 220px;
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    background-color: #EE3643;
+    text-align: center;
+    background: #EE3643;
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.footer__list-one-elem {
+    margin-left: 58px;
+}
+
+.footer__list-one-elem:nth-child(1) {
+    margin-left: 174px;
+}
+
+.footer__list-one {
+    display: flex;
+    margin-top: 44px;
+    margin-bottom: 0px;
+    padding-left: 0;
+}
+
+.footer__list-two{
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 92px;
+    padding-left: 0;
+}
+
 .footer__link-gold {
     color: #FFD180;
+}
+
+.footer-wrapper__list {
+    display: flex;
 }
 
 .footer__text {
     font-family: "Cuprum";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #F3F7F9;
+    margin: 0;
+    text-align: left;
 }
 
 .footer-wrapper--social {
     background-color: #293449;
+}
+
+.footer__list-social-elem{
+    width:44px;
+    height:44px;
+    border-radius:22px;
+    background-color:#212A3A;
 }
 
 .footer__list-social {
