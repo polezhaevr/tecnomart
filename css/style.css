@@ -64,6 +64,7 @@
 }
 
 .navbar-form__input {
+    width:271px; 
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 400;
@@ -73,24 +74,20 @@
     background-color: #293449;
     outline: none;
     border: none;
+    padding: 0;
+    padding-left: 25px;
+    background-image: url(/img/icon-search-white.svg);
+    background-repeat: no-repeat ;
+    background-position: 0px 2px; 
+    opacity: .3;
 }
 
 .navbar-form {
     padding-top: 9px;
-    padding-left: 17px;
+    margin-left: 13px;
     padding-bottom: 0px;
     margin-bottom: 0px;
 
-}
-
-.navbar-form::before {
-    content: '';
-    display: inline-block;
-    background-image: url(/img/icon-search.png);
-    width: 17px;
-    height: 17px;
-    vertical-align: middle;
-    margin-bottom: 6px;
 }
 
 .nav-bar__panel {
@@ -99,35 +96,82 @@
     padding: 0;
     margin: 0;
     margin-top: 9px;
-    padding-left: 112px;
 }
 
-.nav-bar__elem--cart::before {
-    content: '';
-    display: inline-block;
-    background-image: url(/img/icon-cart.png);
-    width: 15px;
-    height: 15px;
-    margin-left: 50px;
-    margin-right: 4px;
-    margin-bottom: 2px;
-    vertical-align: middle;
+.nav-bar__elem-link--bookmark {
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
-.nav-bar__elem--bookmark::before {
+.nav-bar__elem-link--bookmark::before {
     content: '';
     display: inline-block;
-    background-image: url(/img/icon-bookmark.svg);
+    background-image: url(/img/icon-bookmark-white.svg);
     width: 14px;
     height: 16px;
-    margin-right: 4px;
+    margin-right: 8px;
     margin-bottom: 4px;
     vertical-align: middle;
+    opacity: .3;
 }
 
-.nav-bar__elem--order {
-    margin-left: 22px;
+.nav-bar__elem-link--bookmark:hover {
+    content: '';
+    background-image: url(/img/icon-bookmark-white.svg);
+    width: 14px;
+    height: 16px;
+    background-repeat: no-repeat ;
+    background-position: 25px 2px ; 
+    opacity: 1;
+   
 }
+
+.nav-bar__elem-link--bookmark:active {
+    
+    background-color:#161D29;
+    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-right: 25px;
+    background-position: 25px 13px ; 
+    opacity: .3;
+}
+
+.nav-bar__elem-link--cart{
+    padding-right: 25px;
+}
+
+
+.nav-bar__elem-link--cart::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/img/icon-cart-white.svg);
+    width: 15px;
+    height: 15px;
+    margin-left: 25px;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+    opacity: .3;
+}
+
+.nav-bar__elem-link--cart:hover {
+    content: '';
+    background-image: url(/img/icon-cart-white.svg);
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat ;
+    background-position: 25px 3px ; 
+    opacity: 1;
+}
+
+.nav-bar__elem-link--cart:active {
+    background-color:#161D29;
+    padding-bottom: 10px;
+    padding-top: 11px;
+    background-position: 25px 14px ; 
+    opacity: .3;
+}
+
 
 .nav-bar__elem-link--order {
     padding-top: 10px;
@@ -135,6 +179,14 @@
     padding-left: 19px;
     padding-right: 16px;
     background-color: #63A63E;
+}
+
+.nav-bar__elem-link--order:hover {
+    background-color: #5FBB2D; 
+}
+
+.nav-bar__elem-link--order:active {
+    opacity: .3;
 }
 
 
@@ -932,6 +984,13 @@
     margin: 0 auto;
 }
 
+.footer-wrapper__social {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
 
 .footer-wrapper__list:nth-child(2) {
     margin-top: 22px;
@@ -987,7 +1046,7 @@
     padding-left: 0;
 }
 
-.footer__list-two{
+.footer__list-two {
     display: flex;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -1035,6 +1094,15 @@
 .footer__list-social {
     list-style-type: none;
     padding-left: 0;
+    display: flex;
+    margin: 0;
+    margin-left: 141px;
+}
+
+.footer-wrapper__social-text {
+    margin: 0;
+    display: flex;
+    margin-left: 118px;
 }
 
 .footer__text-social {
@@ -1044,6 +1112,12 @@
     font-size: 16px;
     line-height: 18px;
     color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer__text-social:nth-child(2) {
+    margin-left: 51px;
 }
 
 .footer__text-social-color {
@@ -1293,6 +1367,10 @@
 }
 
 /*блок формы обратгой связи feedback*/
+
+.feedback {
+    display: none;
+}
 
 .form__feedback-name,
 .form__feedback-email,
