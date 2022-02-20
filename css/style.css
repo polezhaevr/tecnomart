@@ -3,8 +3,8 @@
     font-family: "Cuprum";
     src: local("cuprum"),
         local("cuprum"),
-        url("/fonts/cuprum.woff2") format("woff2"),
-        url("/fonts/cuprum.woff") format("woff");
+        url("../fonts/cuprum.woff2") format("woff2"),
+        url("../fonts/cuprum.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -14,8 +14,8 @@
     font-family: "Cuprum Italic";
     src: local("cuprumitalic"),
         local("cuprumitalic"),
-        url("/fonts/cuprumitalic.woff2") format("woff2"),
-        url("/fonts/cuprumitalic.woff") format("woff");
+        url("../fonts/cuprumitalic.woff2") format("woff2"),
+        url("../fonts/cuprumitalic.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -24,8 +24,8 @@
     font-family: "PT Sans";
     src: local("ptsans"),
         local("ptsans"),
-        url("/fonts/ptsans.woff2") format("woff2"),
-        url("/fonts/ptsans.woff") format("woff");
+        url("../fonts/ptsans.woff2") format("woff2"),
+        url("../fonts/ptsans.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
