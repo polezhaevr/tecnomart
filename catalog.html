@@ -106,43 +106,66 @@
         <div classs="filter">
           <h2 class="filter-contents">Фильтр:</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="filter-item">
+              <legend class = "filter-name">Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min tabindex="0""></div>
+                  <div class="toggle toggle-max tabindex="0""></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+              <div class = "line">
+      
+              </div>
+          </fieldset>
+            <fieldset class="filter-manufacturers">
               <legend class="production-legend">Производители:</legend>
               <ul class="filter-list">
                 <li class="filter-listt__elem">
-                  <input type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
-                  <label for="filter-baxter-of-california" class="filter__name-brand">Bosch</label>
+                  <input class = "visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label for="filter-bosch" class="filter__name-brand">Bosch</label>
                 </li>
                 <li class="filter-listt__elem">
-                  <input type="checkbox" name="mr-natty" id="filter-mr-natty">
-                  <label for="filter-mr-natty" class="filter__name-brand">Интерскол</label>
+                  <input class = "visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol" id="filter-interscol">
+                  <label for="filter-interscol" class="filter__name-brand">Интерскол</label>
                 </li>
                 <li class="filter-listt__elem">
-                  <input type="checkbox" name="suavecito" id="filter-suavecito" checked>
-                  <label for="filter-suavecito" class="filter__name-brand">Makita</label>
+                  <input class = "visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita" class="filter__name-brand">Makita</label>
                 </li>
                 <li class="filter-listt__elem">
-                  <input type="checkbox" name="malin-goetz" id="filter-malin-goetz">
-                  <label for="filter-malin-goetz" class="filter__name-brand">Dewalt</label>
+                  <input class = "visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt" class="filter__name-brand">Dewalt</label>
                 </li>
                 <li class="filter-listt__elem">
-                  <input type="checkbox" name="murrays" id="filter-murrays">
-                  <label for="filter-murrays" class="filter__name-brand">Hitachi</label>
+                  <input class = "visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi" class="filter__name-brand">Hitachi</label>
                 </li>
-
               </ul>
             </fieldset>
-
-            <fieldset>
+            <div class = "line">
+            </div>
+            <fieldset class = "filter-networked">
               <legend class="production-legend">Питание:</legend>
               <ul class="supply-list">
                 <li class="supply-listt__elem">
-                  <input type="radio" name="product-group" value="shaving" id="filter-shave" checked>
-                  <label for="filter-shave" class="supply-listt__name">Аккумуляторы</label>
+                  <input class = "visually-hidden filter-input-radio filter-input" type="radio" value="battery" name="battery" id="filter-battery"" checked>
+                  <label for="filter-battery" class="supply-listt__name">Аккумуляторы</label>
                 </li>
-                <li>
-                  <input type="radio" name="product-group" value="hair-care" id="filter-care">
-                  <label for="filter-care" class="supply-listt__name">Сетевые</label>
+                <li class="supply-listt__elem">
+                  <input class = "visually-hidden filter-input-radio filter-input" value="networked" type="radio" name="networked" id="filter-networked">
+                  <label for="filter-networked" class="supply-listt__name">Сетевые</label>
                 </li>
               </ul>
             </fieldset>
